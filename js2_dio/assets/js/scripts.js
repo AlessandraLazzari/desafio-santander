@@ -14,11 +14,15 @@ function changeText() {
     const lightMode = 'Light Mode';
     const darkMode = 'Dark Mode';
     
+    button.innerHTML = darkMode;
+    h1.innerHTML = lightMode + " ON";
+
     if(body.classList.contains(darkModeClass)) {
         button.innerHTML = lightMode;
         h1.innerHTML = darkMode + " ON";
-        return;
     }
+
+    return;
 }
 
 const darkModeClass = 'dark-mode';
@@ -27,4 +31,4 @@ const h1 = document.getElementById('page-title');
 const body = document.getElementsByTagName('body')[0];
 const footer = document.getElementsByTagName('footer')[0];
 
-button.addEventListener('click', changeMode)
+button.addEventListener('click', changeMode);
